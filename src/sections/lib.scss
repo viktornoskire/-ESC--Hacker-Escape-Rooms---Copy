@@ -1,0 +1,98 @@
+/*Project Colors*/
+$red: #e3170a;
+$dark: #011827;
+$gray: #b6bdb5;
+$blue: #36769d;
+$lightblue: #8acfe5;
+$white: white;
+$black: black;
+/*Screen size variables*/
+$large-screen-breakpoint: 1280px;
+$max-screen-breakpoint: 1500px;
+
+/*Project button mixins*/
+@mixin blueButton {
+  background-color: $lightblue;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: $black;
+  text-decoration: none;
+  width: 11rem;
+  height: 2.35rem;
+  display: flex;  
+  justify-content: center;  
+  align-items: center;
+}
+@mixin buttonLink {
+  text-decoration: underline;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+  color: $blue;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+@mixin redButton {
+  background-color: $red;
+  font-size: 0.6rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  padding: 0.42rem 1.15rem;
+}
+@mixin bigRedButton {
+  background-color: $red;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  width: 11rem;
+  height: 2.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin bigRedButtonDesktop {
+  background-color: $red;
+  color: $white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 11rem;
+  height: 2.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin darkButton {
+  background-color: $dark;
+  border: 2px solid $lightblue;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  color: $lightblue;
+  text-decoration: none;
+  width: 11rem;
+  height: 2.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Project screen-size mixins*/
+@mixin breakpoint($min-size) {
+  @media screen and (min-width: $min-size) {
+    @content;
+  }
+}

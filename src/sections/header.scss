@@ -1,0 +1,139 @@
+@use "./lib.scss" as *;
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $dark;
+  align-items: center;
+  position: relative;
+
+  .overlay__blur {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.5px);
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+      
+    }
+  }
+  .header__container {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1rem 1.2rem 1rem;
+    @include breakpoint($large-screen-breakpoint) {
+      align-items: flex-end;
+    }
+  }
+  .header__title {
+    font-size: 0.85rem;
+    color: $white;
+    width: 3.5rem;
+    margin: 0rem 0rem 0rem 0.5rem;
+    @include breakpoint($large-screen-breakpoint) {
+      width: auto;
+      font-size: 1.42rem;
+      cursor: pointer;
+    }
+  }
+  .header__logo {
+    cursor: pointer;
+  }
+  .header__menu-button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    @include breakpoint($large-screen-breakpoint) {
+      display: none;
+    }
+  }
+  .header__navigation-close {
+    background: none;
+    border: none;
+    @include breakpoint($large-screen-breakpoint) {
+      display: none;
+    }
+  }
+  .header__navigation {
+    display: none;
+    width: 100%;
+
+    @include breakpoint($large-screen-breakpoint) {
+      display: block;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 0.3rem;
+    }
+    &.overlay {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 92%;
+      height: 95%;
+      background-color: $dark;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 0.1s ease-in forwards;
+      animation-delay: 0.15s;
+
+      .header__navigation-close {
+        position: absolute;
+        top: 1rem;
+        right: 0.75rem;
+      }
+    }
+    .header__menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      @include breakpoint($large-screen-breakpoint) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+    .header__menu-item {
+      padding: 0.9rem;
+      text-align: center;
+      @include breakpoint($large-screen-breakpoint) {
+        padding: 0.5rem;
+      }
+    }
+    .header__menu-link {
+      text-decoration: none;
+      color: $white;
+      font-weight: 700;
+      font-size: 1.28rem;
+      @include breakpoint($large-screen-breakpoint) {
+        font-size: 0.85rem;
+      }
+    }
+    .header__menu-link:hover {
+      color: $lightblue;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/* CSS for the module */
+.module3 {
+    position: absolute; /* Absolute position relative to the document */
+    top: 50%;           /* Move to the center of the page vertically */
+    left: 50%;          /* Move to the center of the page horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to truly center */
+    background-color: #410e0e;  /* White background for the module */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Add some shadow */
+    text-align: center;  /* Center the content */
+    font-family: 'Roboto', sans-serif;
+    z-index: 1000;  /* Ensure it's on top of other content */
+    width: 300px; /* Define a width for the module */
+    border-radius: 8px; /* Round the corners */
+  }
+
+  
+  .moduleTitle {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .challengesLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .challengesLink:hover {
+    background-color: #0056b3;
+  }

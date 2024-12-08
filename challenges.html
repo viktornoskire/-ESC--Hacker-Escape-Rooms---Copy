@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hacker Escape Rooms Challenges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="overlay__blur"></div>
+      <div class="header__container">
+        <img
+          class="header__logo"
+          src="./icons/MobileLogo.png"
+          alt="Hacker Escape rooms logo."
+        />
+        <h1 class="header__title">Hacker Escape Rooms</h1>
+        <div class="header__menu-icon">
+          <button class="header__menu-button">
+            <img src="./icons/mobilemenu.png" alt="Menu icon" />
+          </button>
+        </div>
+      </div>
+      <nav class="header__navigation">
+        <div class="header__navigation-icon">
+          <button class="header__navigation-close">
+            <img src="./icons/mobilemenuclose.png" />
+          </button>
+        </div>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="challenges.html" class="header__menu-link">Play online</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="challenges.html" class="header__menu-link">Play on-site</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="about.html" class="header__menu-link">The story</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="filter">
+      <h3>Our challenges</h3>
+      <button type="button" class="filter__button">Filter challenges</button>
+      <form class="filter__form">
+        <img
+          src="./icons/filterModalCloseButton.png"
+          alt="Filter modal close button"
+          class="filter__form__close-button"
+        />
+        <h4 class="filter__title">Filter challenges</h4>
+        <ul>
+          <li class="filter__type">
+            <h5>By type</h5>
+            <input
+              type="checkbox"
+              id="online-challenges"
+              name="online-challenges"
+            />
+            <label for="online-challenges">Include online challenges</label
+            ><br />
+            <input
+              type="checkbox"
+              id="on-site-challenges"
+              name="on-site-challenges"
+            />
+            <label for="on-site-challenges">Include on-site challenges</label>
+          </li>
+          <li class="filter__rating">
+            <h5>By rating</h5>
+            <div
+              class="filter__first-rate"
+              role="group"
+              aria-label="Star rating"
+              aria-labelledby="rating-description"
+            >
+              <span id="rating-description" class="sr-only"
+                >Rating: 5 out of 5 stars</span
+              >
+              <button
+                aria-label="1 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="2 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="3 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="4 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="5 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+            </div>
+            <p>to</p>
+            <div
+              class="filter__second-rate"
+              role="group"
+              aria-label="Star rating"
+              aria-labelledby="rating-description"
+            >
+              <button
+                aria-label="1 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="2 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="3 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="4 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+              <button
+                aria-label="5 star"
+                class="star-button"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-star"></i>
+              </button>
+            </div>
+          </li>
+          <li class="filter__tag">
+            <h5>By tags</h5>
+            <button>Web</button>
+            <button>Coding</button>
+            <button>Linux</button>
+            <button>Electronics</button>
+            <button>SSH</button>
+            <button>CTF</button>
+            <button>Phreaking</button>
+            <button>Javascript</button>
+            <button>Hacking</button>
+            <button>Bash</button>
+          </li>
+          <li class="filter__keyword">
+            <h5>Or type to search for keyword</h5>
+            <input
+              type="text"
+              id="filter__text"
+              name="filter__text"
+              placeholder="Start typing to filter"
+            />
+          </li>
+        </ul>
+      </form>
+    </section>
+    <!--In section challanges, DOM elements gets created from javascript-->
+    <section class="challenges">
+      <div id="challenges__container"></div>
+    </section>
+    <footer class="footer">
+      <div class="footer__company">
+        <h3 class="footer__heading footer__heading--company">
+          [Esc] Hacker Escape Rooms
+        </h3>
+        <p class="footer__text">
+          Quodsi haberent magnalia inter potentiam et divitias, et non illam
+          quidem haec eo spectant haec quoque vos omnino desit illud quo solo
+          felicitatis libertatisque perficiuntur.
+        </p>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__heading footer__heading--contact">Site map</h3>
+        <ul class="footer__menu footer__menu--contact">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">The story</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Contact us</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Legal</a>
+          </li>
+        </ul>
+        <ul class="footer__menu footer__menu--play">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Play online</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Play on-site</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__media">
+        <h3 class="footer__heading footer__heading--media">Follow us on</h3>
+        <ul class="footer__menu footer__menu--media">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Facebook</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Instagram</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="./javascript/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+@use "./lib.scss" as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .content__heading {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 2.6rem 0rem 0.5rem 0rem;
+    @include breakpoint($large-screen-breakpoint) {
+      font-size: 1.28rem;
+      margin: 2.8rem 0rem 2.1rem 0rem;
+    }
+  }
+  .content__rooms {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.4rem;
+    padding: 1rem;
+    margin-left: 0.9rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @include breakpoint($large-screen-breakpoint) {
+      overflow-x: hidden;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      max-width: 1280px;
+    }
+  }
+  .content__room {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgba($gray, 1);
+    border-radius: 0.4rem;
+    width: 13rem;
+    overflow: hidden;
+    flex: 0 0 auto;
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba($gray, 1);
+    }
+    @include breakpoint($large-screen-breakpoint) {
+      margin: 0;
+    }
+  }
+  .room {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .room__heading {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0.6rem;
+    margin: 0.3rem 0rem 0rem 0rem;
+  }
+  .room__image-container {
+    position: relative;
+    width: 100%;
+  }
+  .room__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .room__stars {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0;
+  }
+  .room__stars i {
+    color: $red;
+    font-size: 0.7rem;
+  }
+  .room__type-icon {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    color: $red;
+  }
+  .room__participants {
+    font-size: 0.57rem;
+    padding-left: 0.6rem;
+    margin: 0.3rem 0rem 0rem 0rem;
+  }
+  .room__info {
+    font-size: 0.64rem;
+    padding: 0.5rem 0.5rem 0 0.6rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+  .challenges__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    margin-top: auto;
+  }
+  .room__button--onsite,
+  .room__button--online {
+    @include redButton;
+    margin-top: 0.3rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .content__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem;
+    margin-bottom: 0.3rem;
+    @include breakpoint($large-screen-breakpoint) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.65rem;
+      padding-bottom: 3.1rem;
+      margin: 1.4rem 0rem 0rem 0rem;
+    }
+  }
+  .content__navigation-button {
+    @include blueButton;
+  }
+  .content__navigation-link {
+    @include buttonLink;
+    @include breakpoint($large-screen-breakpoint) {
+      @include bigRedButtonDesktop;
+      order: -1;
+    }
+  }
+  .content__story {
+    background-color: $dark;
+
+    .story__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      @include breakpoint($large-screen-breakpoint) {
+        padding: 3.7rem 1rem 2.8rem 1rem;
+      }
+    }
+    .story__text {
+      font-size: 1rem;
+      color: $white;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 2.3rem;
+      width: 19rem;
+      @include breakpoint($large-screen-breakpoint) {
+        width: 22rem;
+        margin: 0.6rem 0rem 0.5rem 0rem;
+      }
+    }
+    .story__button {
+      @include darkButton;
+      margin: 0.9rem 0rem 2.2rem 0rem;
+    }
+  }
+}

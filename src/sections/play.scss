@@ -1,0 +1,78 @@
+@use "./lib.scss" as *;
+
+.play {
+  .play__container {
+    @include breakpoint($large-screen-breakpoint) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      margin-bottom: 6.6rem;
+    }
+  }
+  .play__image--first {
+    @include breakpoint($large-screen-breakpoint) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+  .play__image--second {
+    @include breakpoint($large-screen-breakpoint) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+  .play__content--first {
+    padding: 0.8rem;
+    @include breakpoint($large-screen-breakpoint) {
+      grid-column: 2 / 2;
+      grid-row: 1 / 1;
+      display: block;
+      margin: auto;
+    }
+  }
+  .play__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .play__heading {
+    font-size: 1.14rem;
+    margin: 0 0 1rem 0;
+    @include breakpoint($large-screen-breakpoint) {
+      width: 15rem;
+      margin: 1rem 0rem 0.58rem 0rem;
+    }
+  }
+  .play__text {
+    font-size: 0.85rem;
+    margin: 0 0 1rem 0;
+    @include breakpoint($large-screen-breakpoint) {
+      width: 15rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .play__button--book,
+  .play__button--challenges {
+    @include bigRedButton;
+    margin: 2rem 0rem 1.45rem 0rem;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .play__button--book,
+  .play__button--challenges {
+    @include breakpoint($large-screen-breakpoint) {
+      margin: 0rem 0rem 1.45rem 0rem;
+    }
+  }
+  .play__content--second {
+    padding: 0.8rem 0.8rem 0.5rem 0.8rem;
+    margin-bottom: 1.5rem;
+    @include breakpoint($large-screen-breakpoint) {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "./sections/lib.scss" as *;
+@use "./sections/header.scss";
+@use "./sections/introduction.scss";
+@use "./sections/content.scss";
+@use "./sections/play.scss";
+@use "./sections/footer.scss";
+@use "./sections/challenges.scss";
+@use "./sections/about.scss";
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  background-color: $dark;
+}
+body {
+  padding: 0;
+  margin: 0;
+  max-width: $max-screen-breakpoint;
+  margin: auto;
+  background-color: $white;
+}

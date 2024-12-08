@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hacker Escape Room - Challenge yourself online or on-site.</title>
+    <meta
+      name="description"
+      content="Hacker Escape Room offers hacking-inspired challenges and puzzles for both organizations and a group of friends, online and on-site."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      property="og:title"
+      content="Hacker Escape Room - Challenge yourself online or on-site"
+    />
+    <meta
+      property="og:description"
+      content="Play our hacker-inspired challenges online or on-site. Perfect for friends and team-building."
+    />
+    <meta
+      property="og:image"
+      content="https://nishune.github.io/Hacker_Escape_Room_Website/img/img1mobile.png"
+    />
+    <meta
+      property="og:url"
+      content="https://nishune.github.io/Hacker_Escape_Room_Website/"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="overlay__blur"></div>
+      <div class="header__container">
+        <img
+          class="header__logo"
+          src="./icons/MobileLogo.png"
+          alt="Hacker Escape rooms logo."
+        />
+        <h1 class="header__title">Hacker Escape Rooms</h1>
+        <div class="header__menu-icon">
+          <button class="header__menu-button">
+            <img src="./icons/mobilemenu.png" alt="Menu icon" />
+          </button>
+        </div>
+      </div>
+      <nav class="header__navigation">
+        <div class="header__navigation-icon">
+          <button class="header__navigation-close">
+            <img src="./icons/mobilemenuclose.png" />
+          </button>
+        </div>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="challenges.html" class="header__menu-link">Play online</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="challenges.html" class="header__menu-link">Play on-site</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="about.html" class="header__menu-link">The story</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="introduction">
+        <img
+          class="introduction__image introduction__image--mobile"
+          src="./img/img1mobile.png"
+          alt="Hacker sitting in front of a computer on mobile view."
+        />
+        <img
+          class="introduction__image introduction__image--desktop"
+          src="./img/img1desktop.png"
+          alt="Hacker sitting in front of a computer on desktop view."
+        />
+        <div class="introduction__buttons">
+          <a href="#" class="introduction__button--onsite">
+            On-site challenges
+          </a>
+          <a href="#" class="introduction__button--online">
+            Online challenges
+          </a>
+        </div>
+        <article class="reviews">
+          <div class="reviews__container">
+            <div class="reviews__item reviews__item--first">
+              <img
+                class="reviews__user"
+                src="./img/userDesktop.png"
+                alt="Profile picture of a user"
+              />
+              <div class="reviews__content">
+                <p class="reviews__text">
+                  This is a quote about how amazing this place is and how much
+                  fun me and my friends had when we tried it
+                </p>
+                <p class="reviews__date">
+                  John Doe, visited us in September 2021
+                </p>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--second">
+              <img
+                class="reviews__user"
+                src="./img/userDesktop.png"
+                alt="Profile picture of a user"
+              />
+              <div class="reviews__content">
+                <p class="reviews__text">
+                  This is a quote about how amazing this place is and how much
+                  fun me and my friends had when we tried it
+                </p>
+                <p class="reviews__date">
+                  John Doe, visited us in September 2021
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content">
+        <h2 class="content__heading">Popular challenges right now</h2>
+        <!--Generating top-rated room from javascript in content-->
+        <div class="content__rooms"></div>
+        <div class="content__navigation">
+          <a href="#" class="content__navigation-button">
+            On-site challenges
+          </a>
+          <a href="#" class="content__navigation-link"> Online challenges </a>
+        </div>
+        <article class="content__story">
+          <div class="story__container">
+            <p class="story__text">
+              Quodsi haberent magnalia inter potentiam et divitias, et non illam
+              quidem haec eo spectant haec quoque vos omnino desit illud quo
+              solo felicitatis libertatisque perficiuntur.
+            </p>
+            <a href="#" class="story__button"> Read the full story </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="play">
+        <div class="play__container">
+          <div class="play__image play__image--first">
+            <img
+              class="play__img"
+              src="./img/playfirstimg.png"
+              alt="People working in front of a computer"
+            />
+          </div>
+          <div class="play__content play__content--first">
+            <h2 class="play__heading">
+              Play with your friends or build your team stronger at work
+            </h2>
+            <p class="play__text">
+              Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
+              nihil inuitam. Nemo nocere tibi erit, et non inimicos, et
+            </p>
+            <button class="play__button play__button--book" type="button">
+              Book on-site today
+            </button>
+          </div>
+          <div class="play__image play__image--second">
+            <img
+              class="play__img"
+              src="./img/playsecondimg.png"
+              alt="Woman working in front of a computer"
+            />
+          </div>
+          <div class="play__content play__content--second">
+            <h2 class="play__heading">
+              Play online or visit our venue for one of our 25 escape rooms
+            </h2>
+            <p class="play__text">
+              Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
+              nihil inuitam. Nemo nocere tibi erit, et non inimicos, et
+            </p>
+            <button class="play__button play__button--challenges" type="button">
+              See all challenges
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__company">
+        <h3 class="footer__heading footer__heading--company">
+          [Esc] Hacker Escape Rooms
+        </h3>
+        <p class="footer__text">
+          Quodsi haberent magnalia inter potentiam et divitias, et non illam
+          quidem haec eo spectant haec quoque vos omnino desit illud quo solo
+          felicitatis libertatisque perficiuntur.
+        </p>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__heading footer__heading--contact">Site map</h3>
+        <ul class="footer__menu footer__menu--contact">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">The story</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Contact us</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Legal</a>
+          </li>
+        </ul>
+        <ul class="footer__menu footer__menu--play">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Play online</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Play on-site</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__media">
+        <h3 class="footer__heading footer__heading--media">Follow us on</h3>
+        <ul class="footer__menu footer__menu--media">
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Facebook</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Instagram</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="./javascript/main.js"></script>
+  </body>
+</html>
